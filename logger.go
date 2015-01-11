@@ -229,12 +229,3 @@ func (l *Logger) Debug(format string, args ...interface{}) {
 func init() {
 	Reset()
 }
-
-/////////
-func (l *Logger) Infof(format string, args ...interface{}) {
-	l.log(NOTICE, format, args...)
-}
-func (l *Logger) Infoln(args ...interface{}) {
-	s := fmt.Sprint(args...)
-	l.log(NOTICE, "%s", s)
-}
